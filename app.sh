@@ -7,7 +7,7 @@ local URL="http://zlib.net/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"
-./configure --prefix="${DEPS}" --libdir="${DEST}/lib"
+./configure --prefix="${DEPS}" --libdir="${DEST}/lib" --shared
 make
 make install
 rm -v "${DEST}/lib"/*.a
@@ -22,9 +22,7 @@ local FILE="${FOLDER}.tar.gz"
 local URL="http://www.openssl.org/source/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
-# cp -vf "src/${FOLDER}-parallel-build.patch" "target/${FOLDER}/"
 pushd "target/${FOLDER}"
-# patch -p1 -i "${FOLDER}-parallel-build.patch"
 ./Configure --prefix="${DEPS}" --openssldir="${DEST}/etc/ssl" \
   zlib-dynamic --with-zlib-include="${DEPS}/include" --with-zlib-lib="${DEPS}/lib" \
   shared threads linux-armv4 -DL_ENDIAN ${CFLAGS} ${LDFLAGS} \
@@ -36,7 +34,7 @@ mkdir -p "${DEST}/libexec"
 cp -vfa "${DEPS}/bin/openssl" "${DEST}/libexec/"
 cp -vfa "${DEPS}/lib/libssl.so"* "${DEST}/lib/"
 cp -vfa "${DEPS}/lib/libcrypto.so"* "${DEST}/lib/"
-# cp -vfaR "${DEPS}/lib/engines" "${DEST}/lib/"
+cp -vfaR "${DEPS}/lib/engines"* "${DEST}/lib/"
 cp -vfaR "${DEPS}/lib/pkgconfig" "${DEST}/lib/"
 rm -vf "${DEPS}/lib/libcrypto.a" "${DEPS}/lib/libssl.a"
 sed -e "s|^libdir=.*|libdir=${DEST}/lib|g" -i "${DEST}/lib/pkgconfig/libcrypto.pc"
@@ -52,14 +50,13 @@ local FILE="${FOLDER}.tar.gz"
 local URL="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
-mkdir target/${FOLDER}
 pushd "target/${FOLDER}"
 sed -i -e "s/sshd\.pid/pid.txt/" pathnames.h
 ./configure --host="${HOST}" --prefix="${DEST}" --disable-strip \
   --with-zlib="${DEPS}" --with-ssl-dir="${DEPS}" \
   --with-pid-dir=/tmp/DroboApps/openssh --with-privsep-path="${DEST}/var/empty" \
   --with-privsep-user=sshd \
-  --with-sandbox=rlimit select_works_with_rlimit=yes
+  --with-sandbox=no
 make
 make install-nokeys
 mv "${DEST}/etc"/ssh_config{,.default}
