@@ -1,6 +1,6 @@
 ### ZLIB ###
 _build_zlib() {
-local VERSION="1.2.8"
+local VERSION="1.2.13"
 local FOLDER="zlib-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://zlib.net/${FILE}"
@@ -16,10 +16,10 @@ popd
 
 ### OPENSSL ###
 _build_openssl() {
-local VERSION="1.0.2e"
+local VERSION="1.1.1t"
 local FOLDER="openssl-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
-local URL="http://mirror.switch.ch/ftp/mirror/openssl/source/${FILE}"
+local URL="http://www.openssl.org/source/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 cp -vf "src/${FOLDER}-parallel-build.patch" "target/${FOLDER}/"
@@ -46,10 +46,10 @@ popd
 
 ### OPENSSH ###
 _build_openssh() {
-local VERSION="7.1p2"
+local VERSION="9.2"
 local FOLDER="openssh-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
-local URL="http://mirror.switch.ch/ftp/pub/OpenBSD/OpenSSH/portable/${FILE}"
+local URL="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"
