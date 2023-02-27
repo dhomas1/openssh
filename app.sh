@@ -50,9 +50,8 @@ local FILE="${FOLDER}.tar.gz"
 local URL="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
-mkdir "target/${FOLDER}"
 pushd "target/${FOLDER}"
-# sed -i -e "s/sshd\.pid/pid.txt/" pathnames.h
+sed -i -e "s/sshd\.pid/pid.txt/" pathnames.h
 ./configure --host="${HOST}" --prefix="${DEST}" --disable-strip \
   --with-zlib="${DEPS}" --with-ssl-dir="${DEPS}" \
   --with-pid-dir=/tmp/DroboApps/openssh --with-privsep-path="${DEST}/var/empty" \
