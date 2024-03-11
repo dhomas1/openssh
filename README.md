@@ -36,7 +36,7 @@ Each invocation creates a log file with all the generated output.
 
 If you feel like buying me a beer:
 
-[![Patreon](https://c14.patreon.com/Patreon_Wordmark_fb38c295a1.png)](http://www.patreon.com/domcotugno)
+[![Patreon]](http://www.patreon.com/domcotugno)
 
 [![Paypal](https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif)]([https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KYFBRYLKSGNKA](https://paypal.me/domenico?country.x=CA&locale.x=en_US))
 
