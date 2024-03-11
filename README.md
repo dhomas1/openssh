@@ -1,7 +1,7 @@
 openssh 9.6p1
 =======
 
-This is a set of scripts to package a DroboApp from scratch, i.e., download sources, unpackage, compile, install, and package in a TGZ file. The `master` branch contains the Drobo5N version.
+This is a set of scripts to package a DroboApp from scratch, i.e., download sources, unpackage, compile, install, and package in a TGZ file. The `master` branch contains the Drobo5N version. It also works on the 5N2 (which is what I test on), as well as the B810N, though I have no way of testing this.
 
 ## I just want to install the DroboApp, what do I do?
 
