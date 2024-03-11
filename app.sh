@@ -1,6 +1,6 @@
 ### ZLIB ###
 _build_zlib() {
-local VERSION="1.2.13"
+local VERSION="1.3.1"
 local FOLDER="zlib-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://zlib.net/${FILE}"
@@ -16,7 +16,7 @@ popd
 
 ### OPENSSL ###
 _build_openssl() {
-local VERSION="1.1.1u"
+local VERSION="1.1.1w"
 local FOLDER="openssl-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://www.openssl.org/source/${FILE}"
@@ -44,7 +44,7 @@ popd
 
 ### OPENSSH ###
 _build_openssh() {
-local VERSION="9.3p2"
+local VERSION="9.6p1"
 local FOLDER="openssh-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://www.ftp.ne.jp/OpenBSD/OpenSSH/portable/${FILE}"
