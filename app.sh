@@ -16,10 +16,11 @@ popd
 
 ### OPENSSL ###
 _build_openssl() {
-local VERSION="1.1.1w"
+local VERSION="1.1.1za"
 local FOLDER="openssl-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
-local URL="http://www.openssl.org/source/${FILE}"
+# local URL="http://www.openssl.org/source/${FILE}"
+local URL="https://github.com/kzalewski/openssl-1.1.1/archive/refs/tags/${VERSION}.tar.gz"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"
@@ -44,7 +45,7 @@ popd
 
 ### OPENSSH ###
 _build_openssh() {
-local VERSION="9.6p1"
+local VERSION="9.9p1"
 local FOLDER="openssh-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://www.ftp.ne.jp/OpenBSD/OpenSSH/portable/${FILE}"
