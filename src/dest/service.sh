@@ -7,7 +7,7 @@
 
 framework_version="2.1"
 name="openssh"
-version="9.6p1"
+version="9.9p1"
 description="OpenSSH is a suite of security-related network-level utilities based on the Secure Shell protocol."
 depends=""
 webui=""
