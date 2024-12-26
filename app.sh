@@ -7,7 +7,7 @@ local URL="http://zlib.net/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"
-./configure --prefix="${DEPS}" --libdir="${DEST}/lib" --shared --disable-Werror
+./configure --prefix="${DEPS}" --libdir="${DEST}/lib" --shared
 make
 make install
 rm -v "${DEST}/lib"/*.a
