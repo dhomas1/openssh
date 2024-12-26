@@ -28,7 +28,7 @@ local URL="https://github.com/kzalewski/openssl-1.1.1/archive/refs/tags/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"
-./Configure --prefix="${DEPS}" --openssldir="${DEST}/etc/ssl" \
+./configure --prefix="${DEPS}" --openssldir="${DEST}/etc/ssl" \
   zlib-dynamic --with-zlib-include="${DEPS}/include" --with-zlib-lib="${DEPS}/lib" \
   shared threads linux-armv4 -DL_ENDIAN ${CFLAGS} ${LDFLAGS} \
   -Wa,--noexecstack -Wl,-z,noexecstack
