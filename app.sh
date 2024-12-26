@@ -1,3 +1,5 @@
+set -x
+
 export CFLAGS="-Wno-error"
 
 ### ZLIB ###
