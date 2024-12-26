@@ -31,7 +31,7 @@ fi
 export NAME="$(basename ${PWD})"
 export DEST="${BUILD_DEST:-/mnt/DroboFS/Shares/DroboApps/${NAME}}"
 export DEPS="${PWD}/target/install"
-export CFLAGS="${CFLAGS:-} -Os -fPIC"
+export CFLAGS="${CFLAGS:-} -Os -fPIC -Wno-error"
 export CXXFLAGS="${CXXFLAGS:-} ${CFLAGS}"
 export CPPFLAGS="-I${DEPS}/include"
 export LDFLAGS="${LDFLAGS:-} -Wl,-rpath,${DEST}/lib -L${DEST}/lib"
