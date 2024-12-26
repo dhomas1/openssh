@@ -1,3 +1,5 @@
+export CFLAGS="-Wno-error"
+
 ### ZLIB ###
 _build_zlib() {
 local VERSION="1.3.1"
