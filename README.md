@@ -35,8 +35,8 @@ Each invocation creates a log file with all the generated output.
 ## Sources
 
 * zlib: http://zlib.net/
-* openssl: http://www.openssl.org/
-* openssh: http://www.openssh.com/
+* openssl: http://www.openssl.org/ & https://github.com/kzalewski/openssl-1.1.1 (for backports from v3.x)
+* openssh: http://www.openssh.com/ & http://www.ftp.ne.jp/ (for pre-compiled portable source files)
 
 ## Help support the apps
 
