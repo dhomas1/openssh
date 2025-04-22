@@ -7,6 +7,12 @@ This is a set of scripts to package a DroboApp from scratch, i.e., download sour
 
 Check the [releases](https://github.com/dhomas1/openssh/releases) page. If there are no releases available, then you have to compile.
 
+Once installed, you can symlink the ssh binary to /usr/bin/ using the following command via command line:
+
+ln -s /mnt/DroboFS/Shares/DroboApps/openssh/bin/ssh /usr/bin/ssh
+
+This will allow the ssh binary to be used systemwide, and is especially useful to be able to use rsync to move files to another server. 
+
 ## How to compile
 
 First make sure that you have a [working cross-compiling VM](https://github.com/droboports/droboports.github.io/wiki/Setting-up-a-VM).
