@@ -52,7 +52,8 @@ _build_openssh() {
 local VERSION="10.0p1"
 local FOLDER="openssh-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
-local URL="http://www.ftp.ne.jp/OpenBSD/OpenSSH/portable/${FILE}"
+local URL="http://mirror.junda.nl/pub/OpenBSD/OpenSSH/portable/${FILE}"
+# local URL="http://www.ftp.ne.jp/OpenBSD/OpenSSH/portable/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"
