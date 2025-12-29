@@ -1,4 +1,4 @@
-openssh 10.0p1
+openssh 10.2p1
 =======
 
 This is a set of scripts to package a DroboApp from scratch, i.e., download sources, unpackage, compile, install, and package in a TGZ file. The `master` branch contains the Drobo5N version. It also works on the 5N2 (which is what I test on), as well as the B810N, though I have no way of testing this.
@@ -36,7 +36,7 @@ Each invocation creates a log file with all the generated output.
 
 * zlib: http://zlib.net/
 * openssl: http://www.openssl.org/ & https://github.com/kzalewski/openssl-1.1.1 (for backports from v3.x)
-* openssh: http://www.openssh.com/ & http://www.ftp.ne.jp/ (for pre-compiled portable source files)
+* openssh: http://www.openssh.com/ & [http://www.ftp.ne.jp/](http://mirror.junda.nl/) (for pre-compiled portable source files)
 
 ## Help support the apps
 
