@@ -18,14 +18,14 @@ popd
 
 ### OPENSSL ###
 _build_openssl() {
-local VERSION="1.1.1zb_p3"
+local VERSION="1.1.1zd"
 local FOLDER="${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 # local URL="http://www.openssl.org/source/${FILE}"
 local URL="https://github.com/kzalewski/openssl-1.1.1/archive/refs/tags/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
-pushd "target/openssl-1.1.1-1.1.1zb_p3"
+pushd "target/openssl-1.1.1-1.1.1zd"
 mkdir ${DEST}/etc
 mkdir ${DEST}/etc/ssl
 ./Configure --prefix="${DEPS}" --openssldir="${DEST}/etc/ssl" \
@@ -49,7 +49,7 @@ popd
 
 ### OPENSSH ###
 _build_openssh() {
-local VERSION="10.0p1"
+local VERSION="10.2p1"
 local FOLDER="openssh-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://mirror.junda.nl/pub/OpenBSD/OpenSSH/portable/${FILE}"
