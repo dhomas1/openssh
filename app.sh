@@ -2,7 +2,7 @@ set -x
 
 ### ZLIB ###
 _build_zlib() {
-local VERSION="1.3.1"
+local VERSION="1.3.2"
 local FOLDER="zlib-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://zlib.net/${FILE}"
@@ -18,7 +18,7 @@ popd
 
 ### OPENSSL ###
 _build_openssl() {
-local VERSION="1.1.1zd"
+local VERSION="1.1.1zg"
 local FOLDER="${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 # local URL="http://www.openssl.org/source/${FILE}"
@@ -49,7 +49,7 @@ popd
 
 ### OPENSSH ###
 _build_openssh() {
-local VERSION="10.2p1"
+local VERSION="10.3p1"
 local FOLDER="openssh-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://mirror.junda.nl/pub/OpenBSD/OpenSSH/portable/${FILE}"
