@@ -25,7 +25,7 @@ local FILE="${FOLDER}.tar.gz"
 local URL="https://github.com/kzalewski/openssl-1.1.1/archive/refs/tags/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
-pushd "target/openssl-1.1.1-1.1.1zd"
+pushd "target/openssl-1.1.1-1.1.1zg"
 mkdir ${DEST}/etc
 mkdir ${DEST}/etc/ssl
 ./Configure --prefix="${DEPS}" --openssldir="${DEST}/etc/ssl" \
